@@ -1,0 +1,30 @@
+{
+    "project": {
+      "name": "concert-tracker",
+      "slug": "concert-tracker"
+    },
+    "s3": {
+      "bucket": "graphics.axios.com",
+      "folder": "concert-tracker"
+    },
+    "google": {
+      "doc": [
+        {
+          "id": "",
+          "filepath": "src/data/copy.json"
+        }
+      ],
+      "sheet": [
+        {
+          "id": "",
+          "gid": "",
+          "filepath": ""
+        }
+      ]
+    },
+    "files": [],
+    "isFullbleed": false,
+    "appleFallback": "<%= meta.appleFallback %>",
+    "newsletterFallback": "<%= meta.newsletterFallback %>",
+    "embedVersion": "1.0"  
+  }
