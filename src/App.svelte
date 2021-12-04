@@ -233,6 +233,7 @@ footer {
   font-size: 12px;
   color: #ccc;
   font-weight: 400;
+  margin: 0 auto;
   opacity: .25;
 }
 
