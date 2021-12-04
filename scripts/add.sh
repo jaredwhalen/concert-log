@@ -1,4 +1,3 @@
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 #new entry
 date=$1
 band=$2

@@ -20,9 +20,11 @@
 </script>
 
 <header>
-  <h1>concert<span>.log</span></h1>
+  <h1>jared's concert<span>.log</span></h1>
+  <p>An incomplete list of shows I've been to. Omissions by error or embarrassment.</p>
 </header>
 <div class="intro">
+
   <div class="instructions">
     <p><span>&nbsp;📄<em> Setlist</em>&nbsp;</span> <span>&nbsp;📷<em> Photos/video</em>&nbsp;</span></p>
 
@@ -78,11 +80,16 @@
 
 header {
   text-align: center;
+  padding: 15px;
 }
 
 header h1 span {
   /* text-transform: uppercase; */
   color: var(--accent)
+}
+
+header p {
+  font-family: var(--font2);
 }
 
 .intro {
@@ -106,7 +113,7 @@ header h1 span {
 h1 {
   font-family: var(--font2);
   text-align: center;
-  padding: 50px;
+  padding: 20px 0px;
 }
 
 
