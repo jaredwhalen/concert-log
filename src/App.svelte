@@ -25,7 +25,7 @@
 </script>
 
 <header>
-  <h1>@jared_whalen's concert<span>.log</span></h1>
+  <h1>concert<span>.log</span></h1>
 
 
 
