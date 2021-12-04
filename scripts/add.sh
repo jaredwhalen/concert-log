@@ -1,3 +1,4 @@
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 #new entry
 date=$1
 band=$2
@@ -10,7 +11,7 @@ public_url=""
 if [ $isMedia = true ]
 then
   dropbox_path="Apps/console.log-media/$date/$band"
-  # mkdir -p "$dropbox_path"
+
   curl -X POST https://api.dropboxapi.com/2/files/create_folder_v2 \
     --header "Authorization: Bearer $DROPBOX_API" \
     --header "Content-Type: application/json" \
