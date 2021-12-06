@@ -15,5 +15,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run script file
       run: |
-         chmod +x ./update.sh
-         ./update.sh
+         chmod +x ./scripts/update.sh
+         ./scripts/update.sh
