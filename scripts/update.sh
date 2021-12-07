@@ -4,7 +4,7 @@ cat concerts.csv | python -c 'import csv, json, sys; print(json.dumps([dict(r) f
 npm run build
 
 git add .
-git status // to see what changes are going to be commited
+git status
 git commit -m "$message"
 git push origin main
 
