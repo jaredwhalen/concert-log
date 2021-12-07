@@ -20,7 +20,6 @@ jobs:
     - name: Commit results
       run: |
         cat concerts.csv | python -c 'import csv, json, sys; print(json.dumps([dict(r) for r in csv.DictReader(sys.stdin)]))' > src/data/concerts.json
-        npm run build
         git add -A
-        git commit -m 'New coronavirus data - data updated!' || echo "No changes to commit"
+        git commit -m 'data updated!' || echo "No changes to commit"
         git push origin || echo "No changes to commit"
