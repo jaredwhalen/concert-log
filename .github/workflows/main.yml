@@ -21,7 +21,7 @@ jobs:
       run: |
         cat concerts.csv | python -c 'import csv, json, sys; print(json.dumps([dict(r) for r in csv.DictReader(sys.stdin)]))' > src/data/concerts.json
         npm i
-        npm build
+        npm run build
         git config user.email "jared.m.whalen@gmail.com"
         git config --global user.name "jaredwhalen"
         git add -A
