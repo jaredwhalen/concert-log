@@ -21,7 +21,7 @@ jobs:
       run: |
         cat concerts.csv | python -c 'import csv, json, sys; print(json.dumps([dict(r) for r in csv.DictReader(sys.stdin)]))' > src/data/concerts.json
         git config user.email "jared.m.whalen@gmail.com"
-        git config user.name "jaredwhalen"
+        git config --global user.name "jaredwhalen"
         git add -A
         git commit -m 'data updated!' || echo "No changes to commit"
         git push origin || echo "No changes to commit"
