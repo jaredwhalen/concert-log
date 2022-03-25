@@ -10,8 +10,10 @@ git status
 git commit -m "$message"
 git push origin main
 
-# git checkout gh-pages
-# git rebase main
-# git push origin gh-pages
-# node gh-pages.js
-# git checkout main
+# Commit and push the changes
+git add .
+git commit -m "initial gh-pages commit"
+git push origin gh-pages
+
+# Deploy the code with the gh-pages module
+node ./gh-pages.js
