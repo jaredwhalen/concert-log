@@ -7,6 +7,8 @@
 
   import groupBy from "./js/groupBy";
 
+  concerts.sort((a, b) => new Date(b.date) - new Date(a.date))
+
   let groupedConcerts = Object.entries(groupBy(concerts, 'date'))
 
   let searchTerm = "";
