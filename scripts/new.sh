@@ -1,6 +1,5 @@
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-source ~/.zshrc
 
 echo "When was the show?"
 echo -n "YYYY-MM-DD: "
