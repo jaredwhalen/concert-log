@@ -85,6 +85,8 @@
     gap: 25px;
     margin: 25px 0;
     justify-content: center;
+    width: 100%;
+    overflow-x: scroll;
   }
 
   .flex * {
