@@ -54,8 +54,8 @@
   </div>
 
   <div class="flex">
-    <Table name="Bands, by frequency" data={bands.slice(0 , 10)}/>
-    <Table name="Venues, by frequency" data={venues.slice(0 , 10)}/>
+    <Table name="Bands, by frequency" data={bands}/>
+    <Table name="Venues, by frequency" data={venues}/>
     <!-- <Table name="Years with most concerts" data={years.slice(0 , 10)}/> -->
   </div>
 </div>

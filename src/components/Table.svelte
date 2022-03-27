@@ -3,12 +3,9 @@
   export let data
 </script>
 
+<div>
+<h4>{name}</h4>
 <table>
-  <thead>
-    <tr>
-      <th colspan=2>{name}</th>
-    </tr>
-  </thead>
   <tbody>
     {#each data as el}
           <tr>
@@ -18,17 +15,29 @@
     {/each}
   </tbody>
 </table>
+</div>
 
 
 <style>
 
 table {
-
+  height: 300px;
+  overflow-y: scroll;
+  display: inline-block;
   /* background: var(--dark); */
   padding: 1px 1px 3px;
   text-align: left;
-  
+
 }
+
+ h4 {
+   position: sticky;
+    top: 1px;
+    background: var(--light);
+    padding: 2px 0px;
+    text-align: left;
+ }
+
 
   td {
 
