@@ -54,7 +54,7 @@ generate_row () {
 
   if [ $isMedia = "y" ]
   then
-    dropbox_path="Apps/console.log-media/$date/$band"
+    dropbox_path="Apps/concert.log-media/$date/$band"
 
     curl -X POST https://api.dropboxapi.com/2/files/create_folder_v2 \
       --header "Authorization: Bearer $DROPBOX_API" \
