@@ -48,8 +48,14 @@
 
   <div>
     <p><span><em>{unique.length} different bands</em> @ <span><em>{groupedConcerts.length} shows</em></span></span></p>
+    <br/>
     <p>An incomplete list of shows I've been to. Omissions by error or embarrassment.</p>
     <p>Local/DIY shows currently not included for sanity reasons.</p>
+
+    <br/>
+    <p>A data visualization by <a href="https://jaredwhalen.com" target="_blank">Jared Whalen</a></p>
+    <br/>
+
     <p><span>&nbsp;📄<em> Setlist</em>&nbsp;</span> <span>&nbsp;📷<em> Photos/video</em>&nbsp;</span></p>
   </div>
 
@@ -93,5 +99,8 @@
     flex-basis: 50%;
   }
 
+a {
+  color: var(--accent);
+}
 
 </style>

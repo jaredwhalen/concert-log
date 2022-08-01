@@ -29,7 +29,7 @@
 h1 {
   font-family: var(--font2);
   text-align: center;
-  padding: 20px 0px 10px;
+  padding: 100px 0px 10px;
 }
 
   header {
