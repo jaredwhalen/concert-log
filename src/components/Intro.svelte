@@ -50,7 +50,7 @@
     <p><span><em>{unique.length} different bands</em> @ <span><em>{groupedConcerts.length} shows</em></span></span></p>
     <br/>
     <p>An incomplete list of shows I've been to. Omissions by error or embarrassment.</p>
-    <p>Local/DIY shows currently not included for sanity reasons.</p>
+    <p>Local/DIY shows (mostly) not included for sanity reasons.</p>
 
     <br/>
     <p>A data visualization by <a href="https://jaredwhalen.com" target="_blank">Jared Whalen</a></p>
