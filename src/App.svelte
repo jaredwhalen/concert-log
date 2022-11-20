@@ -5,6 +5,7 @@
   // import concerts from "./data/concerts.json";
   import { csv } from "d3";
   import { onMount } from "svelte";
+  import { Stretch } from 'svelte-loading-spinners';
 
   import groupBy from "./js/groupBy";
 
@@ -52,6 +53,11 @@
         </div>
       {/each}
     </div>
+    {:else}
+    <div style="text-align: center; margin: 50px;">
+      <Stretch size="60" color="#dda71d" unit="px" duration="1s" />
+    </div>
+
     {/if}
     
 </main>
