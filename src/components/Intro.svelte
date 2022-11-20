@@ -36,9 +36,9 @@
   let bands = getCountBy(concerts, "band", false)
   let venues = getCountBy(groupedConcerts, "venue", true)
 
-  concerts.forEach(d => d.year = d.date.slice(0,4))
+  concerts.forEach(d => d.year = new Date(d.date).getFullYear())
 
-  let years = getCountBy(groupedConcerts, "year", true)
+  let years = getCountBy(groupedConcerts, "year", true).sort(((a, b) => b.key - a.key))
   console.log(years)
 
 
@@ -62,7 +62,7 @@
   <div class="flex">
     <Table name="Bands, by frequency" data={bands}/>
     <Table name="Venues, by frequency" data={venues}/>
-    <!-- <Table name="Years with most concerts" data={years.slice(0 , 10)}/> -->
+    <Table name="Year" data={years}/>
   </div>
 </div>
 
@@ -95,9 +95,6 @@
     overflow-x: scroll;
   }
 
-  .flex * {
-    flex-basis: 50%;
-  }
 
 a {
   color: var(--accent);

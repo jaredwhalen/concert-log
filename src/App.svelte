@@ -2,34 +2,46 @@
   import Meta from "./Meta.svelte";
   import Header from "./components/Header.svelte"
   import Intro from "./components/Intro.svelte"
-  import concerts from "./data/concerts.json";
-
+  // import concerts from "./data/concerts.json";
+  import { csv } from "d3";
+  import { onMount } from "svelte";
 
   import groupBy from "./js/groupBy";
 
-  concerts.sort((a, b) => new Date(b.date) - new Date(a.date))
+  let concerts
+  let groupedConcerts
+  let filteredGroupedConcerts
 
-  let groupedConcerts = Object.entries(groupBy(concerts, 'date'))
+  onMount(async () => {
+    concerts = await csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSZVieEKDaJKxzwtgfq73-M7yv2JYwadtfsn7DXXHMRbeXCCK0Y-YVdikT6LaY1RAz88jj1hvDgQpFn/pub?gid=1440750830&single=true&output=csv').then((data) => data)
+    concerts.sort((a, b) => new Date(b.date) - new Date(a.date))
+    groupedConcerts = Object.entries(groupBy(concerts, 'date'))
+  });
+
 
   let searchTerm = "";
 
-  $: filteredGroupedConcerts = groupedConcerts.filter(x => x[1].some(item => item.band.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1));
+  $: if (!!concerts) {
+    filteredGroupedConcerts = groupedConcerts.filter(x => x[1].some(item => item.band.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1));
+  }
+
 </script>
 
 <main id="App">
   <Header/>
+  {#if !!concerts}
   <Intro {concerts} {groupedConcerts}/>
 
     <div class="input-wrapper">
       <input bind:value={searchTerm} placeholder="Search a band name..." />
     </div>
+
     <div id="concerts">
       {#each filteredGroupedConcerts as concert, i}
         <div class="concert-cell">
           {#each concert[1] as row, i}
             <div class="band-content">
               <h3>
-              <!-- {#if i}&nbsp;•&nbsp;{/if} -->
               {row.band}
               {#if row.setlist} <a target="_blank" href={row.setlist}>📄</a>{/if}
               {#if row.public_url} <a target="_blank" href="{row.public_url}"> 📷</a> {/if}
@@ -40,6 +52,8 @@
         </div>
       {/each}
     </div>
+    {/if}
+    
 </main>
 
 <footer>
