@@ -3,7 +3,7 @@
 
 
 
-  <div class="g-share">
+  <!-- <div class="g-share">
     <a target="_blank" href="https://twitter.com/jared_whalen">
       <svg id="twitter" data-name="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.42 416">
         <g id="tfnVb0.tif">
@@ -20,7 +20,7 @@
           transform="translate(-233.59 -233.65)" style="fill:#dddddd;fill-rule:evenodd"></path>
       </svg>
     </a>
-  </div>
+  </div> -->
 </header>
 
 

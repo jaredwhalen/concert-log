@@ -1,57 +1,55 @@
 <script>
-  export let name
-  export let data
+  export let name;
+  export let data;
+  export let height = 200;
 </script>
 
-<div>
-<h4>{name}</h4>
-<table>
-  <tbody>
+<div class="table-container">
+  <div class="table" style="height: {height}px">
     {#each data as el}
-          <tr>
-            <td class="key">{el.key}</td>
-            <td class="count">{el.count}</td>
-          </tr>
+      <div class="row">
+        <div class="key">{el.key}</div>
+        <div class="count">{el.count}</div>
+      </div>
     {/each}
-  </tbody>
-</table>
+  </div>
 </div>
 
-
 <style>
+  .table-container {
+    width: 100%;
+  }
 
-table {
-  height: 300px;
-  overflow-y: scroll;
-  display: inline-block;
-  /* background: var(--dark); */
-  padding: 1px 1px 3px;
-  text-align: left;
-
-}
-
- h4 {
-   position: sticky;
-    top: 1px;
+  h4 {
+    position: sticky;
+    top: 0;
     background: var(--light);
     padding: 2px 0px;
     text-align: left;
- }
-
-
-  td {
-
   }
 
-.key {
+  .table {
+    overflow-y: auto; /* Scrollable */
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+  }
 
-}
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2px 0;
+  }
 
-.count {
-  text-align: right;
-  padding-left: 15px;
-      color: var(--accent)
-  /* font-family: monospace; */
-}
+  .key {
+    flex: 1;
+    text-align: left;
+  }
 
+  .count {
+    text-align: right;
+    padding-left: 15px;
+    color: var(--accent);
+  }
 </style>
